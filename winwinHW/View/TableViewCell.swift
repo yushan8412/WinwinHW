@@ -24,9 +24,9 @@ class TableViewCell: UITableViewCell {
     }
     
     func setUpUi() {
-        userImage.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 16, width: 30, height: 30)
+        userImage.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 16, width: 26, height: 26)
         userName.anchor(top: topAnchor, left: userImage.rightAnchor, paddingTop: 16, paddingLeft: 8)
-        userImage.layer.cornerRadius = 15
+        userImage.layer.cornerRadius = 13
         userImage.image = UIImage(named: "test")
         userImage.contentMode = .scaleAspectFill
         userImage.clipsToBounds = true

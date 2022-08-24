@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AFEE051536FE7D5AC4D47B4 /* Pods_winwinHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592C2763A248E5C5195FE1FD /* Pods_winwinHW.framework */; };
 		80A1083928B5B798007DD74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1083828B5B798007DD74C /* AppDelegate.swift */; };
 		80A1083B28B5B798007DD74C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1083A28B5B798007DD74C /* SceneDelegate.swift */; };
 		80A1083D28B5B798007DD74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1083C28B5B798007DD74C /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592C2763A248E5C5195FE1FD /* Pods_winwinHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_winwinHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A1083528B5B798007DD74C /* winwinHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winwinHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A1083828B5B798007DD74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80A1083A28B5B798007DD74C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		80A1085128B5B918007DD74C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		80A1085428B5BA4E007DD74C /* UserImfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImfo.swift; sourceTree = "<group>"; };
 		80A1085828B5BE0C007DD74C /* AnchorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorExtensions.swift; sourceTree = "<group>"; };
+		BA2FC197D935B477E0A3BE74 /* Pods-winwinHW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-winwinHW.release.xcconfig"; path = "Target Support Files/Pods-winwinHW/Pods-winwinHW.release.xcconfig"; sourceTree = "<group>"; };
+		FB85DE194AA0C25118F7C557 /* Pods-winwinHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-winwinHW.debug.xcconfig"; path = "Target Support Files/Pods-winwinHW/Pods-winwinHW.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFEE051536FE7D5AC4D47B4 /* Pods_winwinHW.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B7275B3F133B550531090AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592C2763A248E5C5195FE1FD /* Pods_winwinHW.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70A68CDA4252BAC3DC626F1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB85DE194AA0C25118F7C557 /* Pods-winwinHW.debug.xcconfig */,
+				BA2FC197D935B477E0A3BE74 /* Pods-winwinHW.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		80A1082C28B5B798007DD74C = {
 			isa = PBXGroup;
 			children = (
 				80A1083728B5B798007DD74C /* winwinHW */,
 				80A1083628B5B798007DD74C /* Products */,
+				70A68CDA4252BAC3DC626F1B /* Pods */,
+				2B7275B3F133B550531090AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80A1084928B5B79A007DD74C /* Build configuration list for PBXNativeTarget "winwinHW" */;
 			buildPhases = (
+				20FCBF81DC6A8A86249317E1 /* [CP] Check Pods Manifest.lock */,
 				80A1083128B5B798007DD74C /* Sources */,
 				80A1083228B5B798007DD74C /* Frameworks */,
 				80A1083328B5B798007DD74C /* Resources */,
+				A213CFE81B6C641029684F11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +204,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20FCBF81DC6A8A86249317E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-winwinHW-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A213CFE81B6C641029684F11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-winwinHW/Pods-winwinHW-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-winwinHW/Pods-winwinHW-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-winwinHW/Pods-winwinHW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80A1083128B5B798007DD74C /* Sources */ = {
@@ -330,6 +399,7 @@
 		};
 		80A1084A28B5B79A007DD74C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB85DE194AA0C25118F7C557 /* Pods-winwinHW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +428,7 @@
 		};
 		80A1084B28B5B79A007DD74C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA2FC197D935B477E0A3BE74 /* Pods-winwinHW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

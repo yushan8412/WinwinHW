@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     
     var tableView = UITableView()
     var winwinData: Winwin? {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -44,8 +47,8 @@ class ViewController: UIViewController {
             }
         }
     }
-
 }
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return winwinData?.data.items.count ?? 0
@@ -55,6 +58,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "TableViewCell") as? TableViewCell else { return UITableViewCell()}
         guard let winwinData = winwinData else { return UITableViewCell()}
+//        cell.userImage.kf.setImage(with: URL(string: winwinData.data.items[indexPath.row].user.imageUrl))
         cell.userName.text = winwinData.data.items[indexPath.row].user.nickName
         return cell
     }
